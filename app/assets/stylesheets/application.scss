@@ -114,3 +114,16 @@ nav.globalMenuSp.active {
   max-width: 50%;
   max-height:  50%;
 }
+
+.img2{
+  max-width: 100%;
+  max-height:  100%;
+}
+
+.kotei {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: light;
+}
