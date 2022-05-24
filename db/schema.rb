@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_16_143430) do
+ActiveRecord::Schema.define(version: 2022_05_24_093803) do
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -24,4 +24,21 @@ ActiveRecord::Schema.define(version: 2022_05_16_143430) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "news_tags", force: :cascade do |t|
+    t.integer "news_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["news_id"], name: "index_news_tags_on_news_id"
+    t.index ["tag_id"], name: "index_news_tags_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "news_tags", "news"
+  add_foreign_key "news_tags", "tags"
 end

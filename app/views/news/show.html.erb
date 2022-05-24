@@ -11,6 +11,9 @@
   </div>
   <div class="row mt-5 pt-5">
     <%= @news.created_at %>{NEWS}
+    <% @news.tags.each do |tag| %>
+      <%= tag.name %>
+    <% end %>
   </div>
   <div class="row m-4">
     <h1><%= @news.title %></h1>
