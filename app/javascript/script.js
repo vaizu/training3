@@ -1,3 +1,5 @@
+/*global $*/
+document.addEventListener("turbolinks:load", function () {
 $(function() {
     $('.hamburger').click(function() {
         $(this).toggleClass('active');
@@ -8,4 +10,5 @@ $(function() {
             $('.globalMenuSp').removeClass('active');
         }
     });
+});
 });
