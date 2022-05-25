@@ -27,6 +27,7 @@
             <%= f.label :詳細, class: "col-sm-2 align-top light" %>
             <%= f.text_area :body, placeholder: "ここに内容を記述します", class: "col-sm-6 p-1", rows:"20" %>
           </div>
+          <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
           <div class="form-group col-10 text-center">
             <%= f.submit "投稿", class: "btn btn-success col-sm-2" %>
           </div>

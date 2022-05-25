@@ -44,7 +44,7 @@ class NewsController < ApplicationController
 
   private
   def news_params
-    params.require(:news).permit(:title,:body)
+    params.require(:news).permit(:title,:body, tag_ids: [])
   end
 
 end
