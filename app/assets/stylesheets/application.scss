@@ -14,6 +14,9 @@
  *= require_self
  */
 
+ @import "slick-theme";
+@import "slick";
+
 /*　ハンバーガーボタン　*/
 .hamburger {
   display : block;
@@ -132,4 +135,10 @@ nav.globalMenuSp.active {
     top: 0;
     z-index: 10;
     background-color: light;
+}
+
+.card-img-overlay{
+  padding: 0;
+  text-align: top;
+  font-weight: bold;
 }
